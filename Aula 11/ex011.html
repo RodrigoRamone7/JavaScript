@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Sistema de verificação de nacionalidade brasileira</h1>
-    <p>Qual a sua nacionalidade? <input type="text" name="país" id="país">
+    <p>Qual país você nasceu? <input type="text" name="país" id="país">
     <input type="button" value="Vetificar" onclick="verif()">
     <div id="res">
 
@@ -22,11 +22,11 @@
         var país = window.document.getElementById('país')
         var pais = String(país.value)
         var res = document.getElementById('res')
-        res.innerHTML = `<p>Seu país de origem é ${pais}</p>`
+        res.innerHTML = `<p>Seu país de origem é <strong>${pais}</strong></p>`
         if (pais == "Brasil"){
-            res.innerHTML += `<p>Você é Brasileiro!</p>`
+            res.innerHTML += `<p>Você é <strong>Brasileiro!</strong></p>`
         } else{
-            res.innerHTML += `<p>Você é Estrangeiro!</p>`
+            res.innerHTML += `<p>Você é <strong>Estrangeiro!</strong></p>`
         }
 
         
