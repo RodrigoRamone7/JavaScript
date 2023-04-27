@@ -16,5 +16,10 @@ function contar(){
         }
         res.innerHTML += `${i} &#x1F449; `
     }
+
     res.innerHTML += '&#x1F3C1;'
+
+    if(inicv > fimv || fimv == 0){
+        res.innerHTML = 'IMPOSSIVEL CONTAR!'
+    }
 }
