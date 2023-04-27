@@ -7,9 +7,14 @@ function contar(){
     var fimv = Number(fim.value)
     var passv = Number (pass.value)
 
-    res.innerHTML = ''
+    res.innerHTML = '<p>Contando:</p>'
 
-    for(i = inicv ; i <= fimv ; i++){
-        res.innerHTML += `${i}`
+    for(i = inicv ; i <= fimv ; i+=passv){
+        if(passv == 0){
+            window.alert ("[ERRO] Número de passos deve ser maior que 0. Considerando 1 passo")
+            passv += 1
+        }
+        res.innerHTML += `${i} &#x1F449; `
     }
+    res.innerHTML += '&#x1F3C1;'
 }
